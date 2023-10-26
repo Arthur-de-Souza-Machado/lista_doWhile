@@ -10,38 +10,25 @@
     Estado Civil: 's', 'c', 'v', 'd';
     */
 
-    //Entrada
-    let nome = prompt(`Informe seu nome`).trim();
-    let idade = Number(prompt(`Informe sua idade`).trim());
-    let salario = Number(prompt(`Informe seu salario`).trim());
-    let sexo = prompt(`Informe seu sexo (F-ferminino ou M-masculino)`).toUpperCase();
-    let estadoC = prompt(`Informe seu estado civil ('s', 'c', 'v', 'd')`).toUpperCase();
-    //Processamento
-    while (nome.length <= 3) {
-        nome = prompt(`Informe seu nome`).trim();
+    let nome = prompt(`Qual o seu nome?`).trim();
+    while (nome.length < 3) {
+        nome = prompt(`Qual o seu nome?`).trim();
     }
-    while(idade >= 0 && idade <= 150)
-    idade = int(input("informe a idade--> "))
-    while (idade > 150 or idade < 0 ):
-    idade = int(input("informe a idade--> "))
-
-    #Salário: maior que zero;
-    salario = float(input("informe um salário--> "))
-    while (salario < 0):
-        salario = float(input("informe um salário--> "))
-
-    #Sexo: 'f' ou 'm';
-
-    sexo = str(input("informe a inicial do seu sexo--> "))
-    while  sexo != "f" and sexo != "m" :
-    sexo = str(input("informe a inicial do seu sexo--> "))
-
-    #Estado Civil: 's', 'c', 'v', 'd';
-
-    estado_civil = str(input("informe a inicial do seu estado civil-->"))
-    while (estado_civil != "s" and estado_civil != "c" and estado_civil != "v" and estado_civil != "d" ):
-    estado_civil = str(input("informe a inicial do seu estado civil-->"))
-
-    //Saída
+    let idade = parseInt(prompt(`Quantos anos tem?`).trim());
+    while (idade < 0 || idade > 150) {
+        idade = parseInt(prompt(`Quantos anos tem?`).trim());
+    }
+    let salario = parseFloat(prompt(`Qual o seu salário?`).replace(",", ".").trim());
+    while (salario < 0) {
+        salario = parseFloat(prompt(`Qual o seu salário?`).replace(",", ".").trim());
+    }
+    let sexo = prompt(`Qual o seu sexo?`).trim().toLowerCase();
+    while (sexo !== "f" || sexo !== "m") {
+        sexo = prompt(`Qual o seu sexo?`).trim().toLowerCase();
+    }
+    let estadoC = prompt(`Qual o seu estado civil? \n S-Solteiro(a) | C-Casado(a) | V-Viúvo(a) | D-Divorciado(a)`).trim().toLowerCase();
+    while (estadoC !== "s" || estadoC !== "c" || estadoC !== "v" || estadoC !== "d") {
+        estadoC = prompt(`Qual o seu estado civil? \n S-Solteiro(a) | C-Casado(a) | V-Viúvo(a) | D-Divorciado(a)`).trim().toLowerCase();
+    }
 
 </script>
